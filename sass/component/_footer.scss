@@ -1,0 +1,115 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: #2f303a;
+}
+.footer .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  }
+.footer__contacts {
+  margin-bottom: 9px;
+}
+.footer__list {
+  margin-top: 20px;
+}
+.footer__contacts:nth-child(3n) {
+  margin-bottom: 0px;
+}
+.footer__link:hover,
+.footer__link:focus {
+  color: var(--accent-color);
+}
+.footer__link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer--color {
+  color: var(--white-color);
+}
+.footer__text {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.footer__form {
+  display: flex;
+}
+.footer__email {
+  padding-left: 16px;
+  width: 358px;
+  height: 50px;
+  display: flex;
+  box-sizing: border-box;
+  width: 358px;
+  height: 50px;
+  left: 815px;
+  top: 2787px;
+  background-color: #2F303A;
+  color: #ffffff;
+  outline: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer__email:focus {
+  border-color: var(--accent-color);
+}
+.footer__email::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.button__subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1px solid transparent;
+  text-align: center;
+  padding: 0px;
+  min-width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  margin-left: 10px;
+  fill: var(--white-color);
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  outline: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button__subscribe:hover,
+.button__subscribe:focus {
+  background-color: var(--accent-color);
+}
+.button-subs:hover + .button__svg,
+.button-subs:focus + .sbutton__svg {
+  fill:var(--white-color);
+}
+.button__svg {
+  margin-left: 10px;
+}
