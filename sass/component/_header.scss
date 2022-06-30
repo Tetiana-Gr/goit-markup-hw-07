@@ -1,13 +1,13 @@
 .header {
   background-color: var(--white-color);
   border-bottom: 1px solid #EEEEEE;
-  
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
 }
-.header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 .visually-hidden {
   white-space: nowrap;
   width: 1px;

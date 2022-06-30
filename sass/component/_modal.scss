@@ -13,9 +13,7 @@
   opacity: 0;
   pointer-events: none;
 }
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.5);
-}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -33,6 +31,10 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   padding: 40px;
+
+    .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
 }
 .modal__close {
   width: 30px;
@@ -85,6 +87,15 @@
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
+      & {
+      transition: fill 250ms 
+      cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+
+      .modal__input:focus + & {
+      fill: var(--accent-color);
+      }
   }
   .modal__input::placeholder {
     font-style: normal;
@@ -94,6 +105,10 @@
     letter-spacing: 0.01em;
     
     color: #757575;
+
+        &:focus {
+        border-color: var(--accent-color);
+  }
   }
   .modal__text::placeholder {
     font-weight: 400;
@@ -112,6 +127,10 @@
     padding: 12px 16px;
     outline: none;
     display: block;
+
+       &:focus {
+      border-color: var(--accent-color);
+  }
   }
   .modal__button {
     width: 200px;
@@ -133,12 +152,14 @@
     (0.4, 0, 0.2, 1), color 250ms cubic-bezier
     (0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier
     (0.4, 0, 0.2, 1);
-  }
-  .modal__button:focus,
-  .modal__button:hover {
+
+    &:focus,
+    &:hover {
     color: var(--white-color);
     background-color: var(--accent-color);
   }
+  }
+
   .modal__label {
     font-style: normal;
     font-weight: 400;
@@ -152,19 +173,6 @@
   .modal-field-btn {
     display: flex;
     justify-content: center;  
-  }
-  .modal__icon {
-  transition: fill 250ms 
-  cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .modal__input:focus {
-    border-color: var(--accent-color);
-  }
-  .modal__input:focus + .modal__icon {
-    fill: var(--accent-color);
-  }
-  .modal__text:focus {
-    border-color: var(--accent-color);
   }
   .modal__coment {
     margin-bottom: 20px;
